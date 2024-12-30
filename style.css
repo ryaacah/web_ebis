@@ -1,0 +1,93 @@
+/* Styling umum */
+body {
+    font-family: 'Poppins', sans-serif; /* Ganti font ke Poppins */
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf0;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .homepage {
+    padding: 40px;
+    position: relative;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .hero {
+    flex: 1;
+  }
+  
+  .hero-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px; /* Tetap kotak dengan rounded sedikit */
+  }
+  
+  .hero-text {
+    flex: 2;
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 10px;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .buy-now {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ff5e57;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+  }
+  
+  .buy-now img.buy-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  
