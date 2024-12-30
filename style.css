@@ -1,10 +1,27 @@
 /* Styling umum */
+/* Styling umum */
 body {
-  font-family: 'Poppins', sans-serif; /* Ganti font ke Poppins */
+  font-family: 'Poppins', sans-serif; /* Default font untuk body */
   margin: 0;
   padding: 0;
   background-color: #fffaf0;
   color: #333;
+}
+
+h1 {
+  font-family: 'Agu Display', sans-serif; /* Terapkan font Agu Display */
+  font-size: 48px; /* Atur ukuran font */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'Caveat', cursive; /* Terapkan font Caveat untuk teks biasa */
+  font-size: 18px; /* Ukuran teks */
+  color: #555; /* Warna teks */
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 header {
@@ -225,32 +242,86 @@ button:hover {
 
 /* Search bar */
 .search-bar {
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .search-bar input {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  background-color: #FF6767;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.product-item p {
+  font-family: 'Caveat', cursive;
   font-size: 16px;
 }
 
-.search-bar button:hover {
-  background-color: #ff4d4d;
+/* Popup styling */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+.popup img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.counter button {
+  padding: 10px;
+  font-size: 18px;
+}
+.counter span {
+  margin: 0 10px;
+  font-size: 18px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5e57;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #ff5e57;
 }
 
 /* Produk Grid */
@@ -352,4 +423,35 @@ button:hover {
   font-size: 24px;
   margin-bottom: 10px;
   color: #FF6767;
+}
+
+/* Styling untuk halaman About Us */
+.about-page {
+  text-align: center; /* Elemen di tengah */
+  padding: 40px;
+  background-color: #fffaf0;
+}
+
+.about-page h1 {
+  font-size: 48px; /* Ukuran font lebih besar */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-page .about-img {
+  width: 80%; /* Lebar gambar lebih besar, dapat disesuaikan */
+  max-width: 600px; /* Batas maksimum gambar */
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 12px; /* Rounded corner */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.about-page p {
+  font-size: 20px; /* Ukuran font lebih besar */
+  color: #555;
+  line-height: 1.6; /* Spasi antar baris */
+  margin: 0 auto; /* Memastikan teks tetap di tengah */
+  max-width: 800px; /* Batas lebar teks */
 }
