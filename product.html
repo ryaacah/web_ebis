@@ -12,16 +12,24 @@
     <nav>
       <ul>
         <li><a href="homepage.html">HOME</a></li>
-        <li><a href="#">PRODUCT</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">WORKSHOP</a></li>
-        <li><a href="#">LOGIN</a></li>
+        <li><a href="product.html" class="active">PRODUCT</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="workshop.html">WORKSHOP</a></li>
+        <li><a href="login.html">LOGIN</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="product-page">
     <h2>Temukan yang kamu inginkan.</h2>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Cari produk..." id="searchInput">
+      <button onclick="searchProducts()">Cari</button>
+    </div>
+
+    <!-- Produk List -->
     <div class="product-list">
       <div class="product-item"><img src="asset/pict1.png" alt="Pict 1"><p>Pict 1</p></div>
       <div class="product-item"><img src="asset/pict2.png" alt="Pict 2"><p>Pict 2</p></div>
@@ -31,7 +39,32 @@
       <div class="product-item"><img src="asset/pict6.png" alt="Pict 6"><p>Pict 6</p></div>
       <div class="product-item"><img src="asset/pict7.png" alt="Pict 7"><p>Pict 7</p></div>
       <div class="product-item"><img src="asset/pict8.png" alt="Pict 8"><p>Pict 8</p></div>
+      <div class="product-item"><img src="asset/pict9.png" alt="Pict 8"><p>Pict 9</p></div>
+      <div class="product-item"><img src="asset/pict10.png" alt="Pict 8"><p>Pict 10</p></div>
+      <div class="product-item"><img src="asset/pict11.png" alt="Pict 8"><p>Pict 11</p></div>
+      <div class="product-item"><img src="asset/pict12.png" alt="Pict 8"><p>Pict 12</p></div>
+      <div class="product-item"><img src="asset/pict13.png" alt="Pict 8"><p>Pict 13</p></div>
+      <div class="product-item"><img src="asset/pict14.png" alt="Pict 8"><p>Pict 14</p></div>
+      <div class="product-item"><img src="asset/pict15.png" alt="Pict 8"><p>Pict 15</p></div>
+      <div class="product-item"><img src="asset/pict16.png" alt="Pict 8"><p>Pict 16</p></div>
     </div>
   </section>
+
+  <!-- JavaScript for search functionality -->
+  <script>
+    function searchProducts() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const productItems = document.querySelectorAll(".product-item");
+
+      productItems.forEach(item => {
+        const productName = item.querySelector("p").textContent.toLowerCase();
+        if (productName.includes(searchQuery)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>

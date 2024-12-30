@@ -11,11 +11,11 @@
     <div class="logo">CHARM YUNIX</div>
     <nav>
       <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="homepage.html"class="active">HOME</a></li>
         <li><a href="product.html">PRODUCT</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">WORKSHOP</a></li>
-        <li><a href="#">LOGIN</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="workshop.html">WORKSHOP</a></li>
+        <li><a href="login.html">LOGIN</a></li>
       </ul>
     </nav>
   </header>
@@ -30,10 +30,79 @@
         <p>Buat gelang impianmu dengan charm unik yang mencerminkan perjalanan hidup, cinta, dan kenangan spesial.</p>
       </div>
     </div>
-    <a href="#" class="buy-now">
-      <span>BUY NOW</span> 
-      <img src="asset/cart-icon.png" alt="Cart Icon" class="buy-icon">
-    </a>
   </section>
+
+  <div class="homepage">
+    
+    <!-- Carousel -->
+    <div class="carousel">
+      <img src="asset/carousel1.png" alt="Image 1">
+      <img src="asset/carousel2.png" alt="Image 2">
+      <img src="asset/carousel3.png" alt="Image 3">
+      <img src="asset/carousel4.png" alt="Image 4">
+      <img src="asset/carousel5.png" alt="Image 5">
+      <img src="asset/carousel2.png" alt="Image 5">
+      <img src="asset/carousel4.png" alt="Image 5">
+      <img src="asset/carousel1.png" alt="Image 5">
+      <img src="asset/carousel5.png" alt="Image 5">
+    </div>
+    
+    <h1>Unlock Your Creativity with Charm Yunix Workshops!</h1>
+    <p>Belajar membuat gelang unik dengan sentuhan personal dalam pengalaman workshop yang seru dan penuh makna.</p>
+
+    <!-- Clickable Boxes -->
+    <div class="workshop-boxes">
+        <a href="workshop.2.html" class="workshop-box">
+            <img class="hero-img" src="asset/image1.png" alt="">
+            <p>Workshop Online</p>
+            <p>Ikuti tutorial live atau tonton kelas rekaman dari mana saja! Dapatkan DIY Kit lengkap langsung ke rumah kamu.</p>
+        </a>
+        <a href="workshop.2.html" class="workshop-box">
+            <img class="hero-img" src="asset/image2.png" alt="">
+            <p>Workshop Offline</p>
+            <p>Rasakan pengalaman seru belajar langsung di event komunitas, bazar, atau co-working space.</p>
+        </a>
+    </div>
+
+    <div>
+        <h2>Gabung Sekarang & Ciptakan Karyamu!</h2>
+        <p>Jangan lewatkan kesempatan untuk mengeksplorasi kreativitasmu. Daftar sekarang untuk pengalaman yang tak terlupakan!</p>
+        <a href="product.html" class="buy-now">
+          <span>BUY NOW</span> 
+          <img src="asset/cart-icon.png" alt="Cart Icon" class="buy-icon">
+        </a>
+    </div>
+</div>
+
+<!-- Carousel Script -->
+<script>
+  // Auto-scroll carousel
+  const carousel = document.querySelector(".carousel");
+  let isMouseDown = false;
+  let startX, scrollLeft;
+
+  // Drag to scroll functionality
+  carousel.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener("mouseleave", () => (isMouseDown = false));
+  carousel.addEventListener("mouseup", () => (isMouseDown = false));
+  carousel.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+
+  // Optional auto-scroll
+  setInterval(() => {
+    if (!isMouseDown) carousel.scrollLeft += 1;
+  }, 20);
+</script>
+
 </body>
 </html>
