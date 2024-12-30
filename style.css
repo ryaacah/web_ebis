@@ -34,8 +34,20 @@ header {
 }
 
 header .logo {
-  font-size: 24px;
+  font-family: 'Agu Display', sans-serif;
+  font-size: 36px;
   font-weight: bold;
+}
+
+header nav a {
+  /* font-family: 'Caveat', sans-serif; */
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+header nav a.active {
+  color: #FF6767; /* Example active color */
 }
 
 header nav ul {
